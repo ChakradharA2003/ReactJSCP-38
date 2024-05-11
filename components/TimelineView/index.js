@@ -12,27 +12,27 @@ const TimelineView = props => {
   return (
     <div className="bg-container">
       <div className="inside-container">
-        <h1 className="head1">MY JOURNEY OF</h1>
-        <h1 className="head2">CCBP 4.0</h1>
-        <div>
-          {items.map(it => {
-            if (it.categoryId === 'COURSE') {
+        <h1 className="head1">
+          MY JOURNEY OF <br />
+          CCBP 4.0
+        </h1>
+        <div className="chrono-container">
+          <Chrono mode="VERTICAL" items={items}>
+            {items.map(it => {
+              if (it.categoryId === 'COURSE') {
+                return (
+                  <div>
+                    <CourseTimelineCard key={it.id} details={it} />
+                  </div>
+                )
+              }
               return (
                 <div>
-                  <Chrono mode="VERTICAL" items={items}>
-                    <CourseTimelineCard key={it.id} details={it} />
-                  </Chrono>
+                  <ProjectTimelineCard key={it.id} details={it} />
                 </div>
               )
-            }
-            return (
-              <div>
-                <Chrono mode="VERTICAL" items={items}>
-                  <ProjectTimelineCard key={it.id} details={it} />
-                </Chrono>
-              </div>
-            )
-          })}
+            })}
+          </Chrono>
         </div>
       </div>
     </div>
