@@ -3,16 +3,50 @@
   font-family: 'Roboto';
 }
 .course-container {
-  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .duration-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.tags-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+.tag-list {
+  background-color: gray;
+  color: #1e293b;
+  font-family: 'Roboto';
+  text-align: center;
+  padding: 2px 6px 2px;
+  font-weight: 500;
+  margin: 7px;
+}
+.course-title {
+  color: #171f46;
+  font-family: 'Roboto';
+  font-size: 28px;
+}
+.duration {
+  color: #171f46;
+  font-size: 16px;
+  font-weight: 500;
+}
+.description {
+  color: #1e293b;
+  font-family: 'Roboto';
+  font-size: 20px;
 }
